@@ -1,24 +1,20 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./views/Login";
+import Inicio from "./views/Inicio";
 import './App.css';
-import Autor from "./components/Autor";
-import Mensaje from "./components/Mensaje";
 
 const App = () => {
-  return(
-    <>
+  return (
+    <Router>
+      <Routes>
 
-      <Autor 
-        nombre="Juan Franciso López Álvarez"
-        correo="pancho2025@gmail.com"
-      />
-      <Mensaje
-        titulo="Programación con Javascript"
-        contenido="Si aprendes a crear proyectos con React no te vas a morir."
-      />
+        <Route path="/" element={<Login />} />
+        <Route path="/inicio" element={<Inicio />} />
 
-
-    </>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
