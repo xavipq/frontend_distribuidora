@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import TablaProductos from '../components/producto/TablaProductos';
 import ModalRegistroProducto from '../components/producto/ModalRegistroProducto';
@@ -430,3 +431,16 @@ saveAs(blob, nombreArchivo);
 };
 
 export default Productos;
+=======
+import InicioProducto from "../components/producto/InicioProducto";
+
+const Productos = () => {
+    return(
+        <>
+        <InicioProducto/>
+        </>
+    )
+}
+
+export default Productos;
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664

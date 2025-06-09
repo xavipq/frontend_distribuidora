@@ -2,10 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import TablaCategorias from '../components/categorias/TablaCategorias'; // Importa el componente de tabla
 import ModalRegistroCategoria from '../components/categorias/ModalRegistroCategoria';
+<<<<<<< HEAD
 import CuadroBusquedas from '../components/busquedas/CuadroBusquedas';
 import ModalEliminacionCategoria from '../components/categorias/ModalEliminacionCategoria';
 import ModalEdicionCategoria from '../components/categorias/ModalActualizacionCategoria';
 import { Container, Button, Row, Col } from "react-bootstrap";
+=======
+import { Container, Button  } from "react-bootstrap";
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
 
 
 // Declaración del componente Categorias
@@ -19,6 +23,7 @@ const Categorias = () => {
     nombre_categoria: '',
     descripcion_categoria: ''
   });
+<<<<<<< HEAD
   const [mostrarModalEliminacion, setMostrarModalEliminacion] = useState(false);
   const [categoriaAEliminar, setCategoriaAEliminar] = useState(null);
 
@@ -47,11 +52,33 @@ const [mostrarModalEdicion, setMostrarModalEdicion] = useState(false);
       }
     };
 
+=======
+
+  const obtenerCategorias = async () => {
+    try {
+      const respuesta = await fetch('http://localhost:3000/api/categorias');
+      if (!respuesta.ok) {
+        throw new Error('Error al cargar las categorías');
+      }
+      const datos = await respuesta.json();
+      setListaCategorias(datos);    // Actualiza el estado con los datos
+      setCargando(false);           // Indica que la carga terminó
+    } catch (error) {
+      setErrorCarga(error.message); // Guarda el mensaje de error
+      setCargando(false);           // Termina la carga aunque haya error
+    }
+  };
+  
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
   // Lógica de obtención de datos con useEffect
   useEffect(() => {
     obtenerCategorias();            // Ejecuta la función al montar el componente
   }, []);                           // Array vacío para que solo se ejecute una vez
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
   // Maneja los cambios en los inputs del modal
   const manejarCambioInput = (e) => {
     const { name, value } = e.target;
@@ -61,6 +88,7 @@ const [mostrarModalEdicion, setMostrarModalEdicion] = useState(false);
     }));
   };
 
+<<<<<<< HEAD
   const manejarCambioInputEdicion = (e) => {
     const { name, value } = e.target;
     setCategoriaEditada(prev => ({
@@ -182,6 +210,39 @@ const categoriasPaginadas = categoriasFiltradas.slice(
   (paginaActual - 1) * elementosPorPagina,
   paginaActual * elementosPorPagina
 );
+=======
+  // Manejo la inserción de una nueva categoría
+  const agregarCategoria = async () => {
+
+    if (!nuevaCategoria.nombre_categoria || !nuevaCategoria.descripcion_categoria) {
+    setErrorCarga("Por favor, completa todos los campos antes de guardar.");
+    return;
+    }
+
+    try {
+      const respuesta = await fetch('http://localhost:3000/api/registrarcategoria', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(nuevaCategoria),
+      });
+
+      if (!respuesta.ok) {
+        throw new Error('Error al agregar la categoría');
+      }
+
+      await obtenerCategorias(); // Refresca toda la lista desde el servidor
+      setNuevaCategoria({ nombre_categoria: '', descripcion_categoria: '' });
+      setMostrarModal(false);
+      setErrorCarga(null);
+    } catch (error) {
+      setErrorCarga(error.message);
+    }
+  };
+
+
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
   // Renderizado de la vista
   return (
     <>
@@ -189,6 +250,7 @@ const categoriasPaginadas = categoriasFiltradas.slice(
         <br />
         <h4>Categorías</h4>
 
+<<<<<<< HEAD
         <Row>
     <Col lg={2} md={4} sm={4} xs={5}>
       <Button variant="primary" onClick={() => setMostrarModal(true)} style={{ width: "100%" }}>
@@ -205,10 +267,16 @@ const categoriasPaginadas = categoriasFiltradas.slice(
 
         
         
+=======
+        <Button variant="primary" onClick={() => setMostrarModal(true)}>
+          Nueva Categoría
+        </Button>
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
         <br/><br/>
 
         {/* Pasa los estados como props al componente TablaCategorias */}
         <TablaCategorias 
+<<<<<<< HEAD
           categorias={categoriasPaginadas} 
           cargando={cargando} 
           error={errorCarga} 
@@ -220,6 +288,14 @@ const categoriasPaginadas = categoriasFiltradas.slice(
           abrirModalEdicion={abrirModalEdicion} // Método para abrir modal de edición
         />
                <ModalRegistroCategoria
+=======
+          categorias={listaCategorias} 
+          cargando={cargando} 
+          error={errorCarga} 
+        />
+
+        <ModalRegistroCategoria
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
           mostrarModal={mostrarModal}
           setMostrarModal={setMostrarModal}
           nuevaCategoria={nuevaCategoria}
@@ -228,6 +304,7 @@ const categoriasPaginadas = categoriasFiltradas.slice(
           errorCarga={errorCarga}
         />
 
+<<<<<<< HEAD
         <ModalEliminacionCategoria
           mostrarModalEliminacion={mostrarModalEliminacion}
           setMostrarModalEliminacion={setMostrarModalEliminacion}
@@ -243,6 +320,8 @@ const categoriasPaginadas = categoriasFiltradas.slice(
           errorCarga={errorCarga}
         />
 
+=======
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
       </Container>
     </>
   );

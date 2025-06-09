@@ -2,13 +2,19 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./views/Login";
 import Inicio from "./views/Inicio";
+<<<<<<< HEAD
 import Encabezado from "./components/encabezado/Encabezado";
 import Estadistica from "./views/Estadisticas";
+=======
+import Encabezado from "./components/login/encabezado/Encabezado";
+
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
 import Productos from "./views/Productos";
 import Categorias from "./views/Categorias";
 import Clientes from "./views/Clientes";
 import Ventas from "./views/Ventas";
 import Compras from "./views/Compras";
+<<<<<<< HEAD
 import Usuarios from "./views/Usuarios";
 import Empleados from "./views/Empleados";
 import CatalogoProductos from "./components/busquedas/CatalogoProductos";
@@ -42,8 +48,38 @@ const App = () => {
           <PiePagina />
         </main>
       </div>
+=======
+import './App.css';
+
+
+
+const App = () => {
+  return (
+    <Router>
+      <Encabezado/>
+      <main className="margen-superior-main">
+          <Routes>
+ 
+            <Route path="/" element={<Login />} />
+            <Route path="/inicio" element={<Inicio />} />
+            
+            <Route path="/productos" element={<Productos />} />
+            <Route path="/categorias" element={<Categorias />} />
+            <Route path="/clientes" element={<Clientes />} />
+            <Route path="/ventas" element={<Ventas />} />
+            <Route path="/compras" element={<Compras />} />
+
+
+
+          </Routes>
+      </main>
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
     </Router>
   );
 };
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664

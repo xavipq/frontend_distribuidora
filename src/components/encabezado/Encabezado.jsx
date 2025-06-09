@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+<<<<<<< HEAD
 import "bootstrap-icons/font/bootstrap-icons.css"; // Importación de íconos de Bootstrap
 import { NavDropdown } from "react-bootstrap";
 import "../../App.css";
 import logo from "../../assets/ajustes.png";
 
+=======
+import logo from "/vite.svg"; // Importación del logo de la ferretería
+import "bootstrap-icons/font/bootstrap-icons.css"; // Importación de íconos de Bootstrap
+import "../../../App.css";
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
 // Estilos personalizados de la aplicación
 
 const Encabezado = () => {
@@ -28,7 +34,10 @@ const Encabezado = () => {
     localStorage.removeItem("contraseña"); // Elimina la contraseña de localStorage
     navegar("/"); // Redirige a la página principal
   };
+<<<<<<< HEAD
   
+=======
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
 
   // Función para alternar el estado del menú lateral
   const alternarColapso = () => setEstaColapsado(!estaColapsado);
@@ -90,7 +99,17 @@ const Encabezado = () => {
                 <strong>Inicio</strong>
               </Nav.Link>
 
+<<<<<<< HEAD
               
+=======
+              <Nav.Link
+                onClick={() => navegarA("/categorias")}
+                className={estaColapsado ? "text-black" : "text-white"}
+              >
+                {estaColapsado ? <i className="bi-house-door-fill me-2"></i> : null}
+                <strong>Categorias</strong>
+              </Nav.Link>
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
 
               <Nav.Link
                 onClick={() => navegarA("/clientes")}
@@ -116,6 +135,7 @@ const Encabezado = () => {
                 <strong>Compras</strong>
               </Nav.Link>
 
+<<<<<<< HEAD
                <NavDropdown 
   title={
     <span>
@@ -312,6 +332,8 @@ const Encabezado = () => {
          
 
 
+=======
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
 
               {/* Lógica condicional para mostrar Cerrar Sesión o Iniciar Sesión */}
               {estaLogueado ? (
@@ -332,7 +354,10 @@ const Encabezado = () => {
                     Iniciar Sesión
                   </Nav.Link>
                 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
               )}
             </Nav>
           </Offcanvas.Body>

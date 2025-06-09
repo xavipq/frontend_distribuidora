@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // ModalRegistroCategoria.jsx
+=======
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
 import React from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 
@@ -13,7 +16,11 @@ const ModalRegistroCategoria = ({
   return (
     <Modal show={mostrarModal} onHide={() => setMostrarModal(false)}>
       <Modal.Header closeButton>
+<<<<<<< HEAD
         <Modal.Title>Agregar Nueva Categoría</Modal.Title>
+=======
+        <Modal.Title>Registro de una nueva Categoría</Modal.Title>
+>>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
       </Modal.Header>
       <Modal.Body>
         <Form>
