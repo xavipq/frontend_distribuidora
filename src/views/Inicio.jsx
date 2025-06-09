@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Image } from "react-bootstrap";
-import descarga from "../assets/descarga.jpeg"
-import Proposito from "../components/inicio/Proposito";
+import Portada from "../assets/ferreteria.jpg";
+import Proposito from "../components/Inicio/Proposito";
 
 const Inicio = () => {
   const [nombreUsuario, setNombreUsuario] = useState("");
