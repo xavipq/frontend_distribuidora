@@ -2,15 +2,10 @@
   "name": "proyecto2030",
   "private": true,
   "version": "0.0.0",
-<<<<<<< HEAD
-=======
-  "type": "module",
->>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-<<<<<<< HEAD
     "preview": "vite preview",
     "test": "jasmine",
     "coverage": "nyc jasmine",
@@ -29,14 +24,10 @@
     ],
     "all": true,
     "check-coverage": false
-=======
-    "preview": "vite preview"
->>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-<<<<<<< HEAD
     "chart.js": "^4.4.9",
     "file-saver": "^2.0.5",
     "jspdf": "^3.0.1",
@@ -50,12 +41,6 @@
     "react-router-dom": "^7.3.0",
     "react-select": "^5.10.1",
     "xlsx": "^0.18.5"
-=======
-    "react": "^19.0.0",
-    "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.3.0"
->>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -66,11 +51,8 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
-<<<<<<< HEAD
     "jasmine": "^5.7.1",
     "nyc": "^17.1.0",
-=======
->>>>>>> 8b9b42bca9c9c56d64c27c621bb09e6d9808a664
     "vite": "^6.2.0"
   }
 }
