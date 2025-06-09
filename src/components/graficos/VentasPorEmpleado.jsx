@@ -2,6 +2,7 @@ import { Card } from "react-bootstrap";
 import { Bar, Pie } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 
+
 const VentasPorEmpleado = ({ empleados, total_ventas }) => {
 const data = {
   labels: empleados, // Nombres de los empleados
@@ -9,7 +10,7 @@ const data = {
     {
       label: 'Ventas(C$)',
       data: total_ventas, // Total de ventas por empleado
-       backgroundColor: [
+    backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
         'rgba(255, 206, 86, 0.2)',
