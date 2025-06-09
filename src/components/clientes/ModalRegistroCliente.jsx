@@ -1,4 +1,3 @@
-// ModalRegistroCliente.jsx
 import React from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 
@@ -46,7 +45,6 @@ const ModalRegistroCliente = ({
       nuevoCliente.cedula.trim() !== ""
     );
   };
-
 
   return (
     <Modal show={mostrarModal} onHide={() => setMostrarModal(false)}>
