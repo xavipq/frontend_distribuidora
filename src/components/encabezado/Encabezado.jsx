@@ -174,7 +174,7 @@ const Encabezado = () => {
             <strong>Gestión Categorías</strong>
           </NavDropdown.Item>
           <NavDropdown.Item
-            onClick={() => navegarA("/catalogoproductos")}
+            onClick={() => navegarA("/catalogo")}
             className="text-black"
           >
             <strong>Catálogo Productos</strong>

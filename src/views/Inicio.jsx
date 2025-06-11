@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Image } from "react-bootstrap";
-import Portada from "../assets/ferreteria.jpg";
+import descarga from "../assets/ferreteria.jpg"
 import Proposito from "../components/Inicio/Proposito";
 
 const Inicio = () => {

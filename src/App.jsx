@@ -12,20 +12,18 @@ import Compras from "./views/Compras";
 import Usuarios from "./views/Usuarios";
 import Empleados from "./views/Empleados";
 import CatalogoProductos from "./components/busquedas/CatalogoProductos";
-import Dashboard from "./views/Dashboard"
+import Dashboard from "./views/Dashboard";
 import RutasProtegida from "./components/rutas/RutaProtegida";
 import PiePagina from "./components/infopie/PiePagina";
 
 import './App.css';
 
-
-
 const App = () => {
   return (
     <Router>
       <div className="app-wrapper">
-      <Encabezado/>
-      <main className="margen-superior-main">
+        <Encabezado />
+        <main className="margen-superior-main">
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/inicio" element={<RutasProtegida vista={<Inicio />} />} />
@@ -39,11 +37,10 @@ const App = () => {
             <Route path="/catalogo" element={<RutasProtegida vista={<CatalogoProductos />} />} />
             <Route path="/dashboard" element={<RutasProtegida vista={<Dashboard />} />} />
             <Route path="/estadisticas" element={<RutasProtegida vista={<Estadistica />} />} />
-
-
+            <Route path="*" element={<div>Página no encontrada</div>} /> {/* Ruta 404 */}
           </Routes>
-      </main>
-        <PiePagina/>
+        </main>
+        <PiePagina />
       </div>
     </Router>
   );
